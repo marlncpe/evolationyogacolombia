@@ -1,0 +1,349 @@
+
+<body>
+
+<header>
+    <nav>
+        <a href="http://www.evolationyogacolombia.com"><img src="./main/assets/images/favicon.png" width="40px" height="40px" ></a>
+    </nav>
+</header>
+
+<main>
+<section>
+    <div class="titulo col-xs-12 col-md-8 col-md-offset-2 text-center">
+        <img src="./main/assets/images/favicon.png" width="90px" height="90px" class="img-responsive">
+        <h3 class="text-center">EVOLATION YOGA COLOMBIA</h3>
+    </div>
+    
+    <div class="form panel panel-body panel-default col-xs-12 col-md-8 col-md-offset-2">
+        
+        <form id="formregister" role="form" method="POST">
+        <h3 class="text-center"><span style="color:black;">PLAN</span></h3>
+        <table border="1" style="border: 1px #C1C1C1 solid;">
+            <tr>
+                <td style="background: #F8F8F8"><h3 class="text-center" id="tituloplan"></h3></td>
+            </tr>
+            <tr>
+                <td>
+                    <h2 class="text-center"><small id="simbol">$</small><span id="precioPlan">199.000</span></h2>
+                    <h4 class="text-center" id="frecuenciaPlan"></h4>
+                </td>
+            </tr>
+        </table>
+      
+            <!-- Datos para informacion personal -->
+            <h4 class="text-center">Información Personal</h4>
+            <div class="form-group col-xs-12 col-md-6">
+                <label style="display: block;">Nombres <span>{{errornombre}}</span></label>
+                <input class="form-control" type="text" ng-model="vm.nombres" id="nombres" placeholder="Nombres">                
+            </div>
+            
+            <div class="form-group col-xs-12 col-md-6">
+                <label style="display: block;">Apellidos <span>{{errorapellidos}}</span></label>
+                <input class="form-control" type="text" ng-model="vm.apellidos" id="apellidos" placeholder="Apellidos">
+            </div>
+
+            <div class="form-group col-xs-12 col-md-6">
+                <label style="display: block;">Tipo de Documento <span>{{errortipodoc}}</span></label>
+                <select class="form-control" ng-model="vm.tipodoc" id="tipodoc">
+                    <option value="">.:SELECCIONAR:.</option>
+                    <option value="1">Cedula de Ciudadanía</option>
+                    <option value="2">Cedula de Extranjería</option>
+                    <option value="3">Pasaporte</option>
+                </select>
+            </div>
+
+            <div class="form-group col-xs-12 col-md-6">
+                <label style="display: block;">Numero Documento <span>{{errornumerodocumento}}</span></label>
+                <input class="form-control" type="text" ng-model="vm.documentonumero" id="documentonumero" placeholder="Numero Documento">
+            </div>
+            
+            <div class="form-group col-xs-12 col-md-6">
+                <label style="display: block;">Correo Electronico <span>{{erroremail}}</span></label>
+                <input class="form-control" type="email" ng-model="vm.email" id="email" placeholder="Correo Electronico">
+            </div>
+            
+            <div class="form-group col-xs-12 col-md-6">
+                <label style="display: block;">Celular <span>{{errorcelular}}</span></label>
+                <input class="form-control" type="text" ng-model="vm.telefono" id="celular" placeholder="Numero de Celular">
+            </div>
+
+
+            <!-- Datos para registro tarjeta -->
+            <h4 class="text-center">Información tarjeta de credito</h4>
+            <div class="form-group col-xs-12 col-md-6">
+                <label style="display: block;">Numero <span>{{errornumerotarjeta}}</span></label>
+                <input class="form-control" type="text" ng-model="tdc.numerotarjeta" placeholder="Numero de la tarjeta de credito">                
+            </div>
+            
+            <div class="form-group col-xs-12 col-md-3">
+                <label style="display: block;">Mes<span>{{errormes}}</span></label>
+                <select class="form-control" ng-model="tdc.mes">
+                    <option value="">.:SELECCIONAR:.</option>
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </div>
+
+            <div class="form-group col-xs-12 col-md-3">
+                <label style="display: block;">Año<span>{{errorano}}</span></label>
+                <select class="form-control" ng-model="tdc.ano">
+                    <option value="">.:SELECCIONAR:.</option>
+                    <option value="2017">17</option>
+                    <option value="2018">18</option>
+                    <option value="2019">19</option>
+                    <option value="2020">20</option>
+                    <option value="2021">21</option>
+                    <option value="2022">22</option>
+                    <option value="2023">23</option>
+                    <option value="2024">24</option>
+                    <option value="2025">25</option>
+                    <option value="2026">26</option>
+                    <option value="2027">27</option>
+                    <option value="2028">28</option>
+                    <option value="2029">29</option>
+                    <option value="2030">30</option>
+                    <option value="2031">31</option>
+                    <option value="2032">32</option>
+                    <option value="2033">33</option>
+                    <option value="2034">34</option>
+                </select>
+            </div>
+
+            <div class="form-group col-xs-12 col-md-6">
+                <label style="display: block;">Tipo de tarjeta<span>{{errortipotarjeta}}</span></label>
+                <select class="form-control" ng-model="tdc.tipotarjeta">
+                    <option value="">.:SELECCIONAR:.</option>
+                    <option value="VISA">Visa</option>
+                    <option value="MASTERCARD">Mastercard</option>
+                    <option value="AMEX">American express</option>
+                    <option value="DINERS">Diners Club</option>
+                    <option value="CODENSA">Codensa</option>
+                </select>
+            </div>
+            
+            <div class="form-group col-xs-12 col-md-6">
+                <label style="display: block;">Dirección<span>{{errordireccion}}</span></label>
+                <input class="form-control" ng-model="tdc.direccion" placeholder="Dirección">
+            </div>
+
+            <h4 class="text-center">POLITICA DE PRIVACIDAD Y PROTECCION DE DATOS</h4>
+
+            <div class="form-group col-xs-12">
+                <textarea name="terminos" id="terminos" class="form-control" style="resize: none; height: 250px;" readonly>NOTA LEGAL CENTRO CULTURAL EVOLATION YOGA COLOMBIA SAS 
+POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS 
+1. LEY DE PROTECCIÓN DE DATOS DE CARÁCTER PERSONAL. Esta Política de tratamiento de datos es referente al uso que CENTRO CULTURAL EVOLATION YOGA COLOMBIA S.A.S. le dará́ a los datos personales que reposen en sus registros de conformidad con lo establecido en la Ley 1581 de 2012 y el Decreto 1377 de 2013. 
+2. POLÍTICA Y CLÁUSULAS DE PRIVACIDAD. Esta declaración tiene como finalidad informar a los clientes y/o titulares de la Política general de Privacidad y Protección de Datos Personales seguida por CENTRO CULTURAL EVOLATION YOGA COLOMBIA S.A.S. S.A.S. Esta Política de Privacidad puede variar en función de exigencias legales, por lo que se aconseja a los clientes y/o titulares que la visiten periódicamente. Será aplicable en caso que los clientes y/o titulares decidan rellenar el formulario de registro como clientes, o el formulario de contacto. 
+3. USO Y TRATAMIENTO DE LOS DATOS. CENTRO CULTURAL EVOLATION YOGA COLOMBIA S.A.S. tiene plena conciencia del uso y tratamiento que se debe dar a los datos personales que se puedan requerir o que se puedan obtener de los clientes y/o titulares en sus paginas web con el fin de gestionar los servicios ofrecidos. 
+CENTRO CULTURAL EVOLATION YOGA COLOMBIA S.A.S. utilizará los datos almacenados en sus bases de datos, principalmente con las siguientes finalidades, sin limitarse únicamente a ellas: 
+1.  a-  Realizar invitaciones a los diferentes eventos y/o lanzamientos de los servicios y/o productos ofrecidos por CENTRO CULTURAL EVOLATION YOGA COLOMBIA S.A.S.
+2.  b-  Informar sobre las Novedades de CENTRO CULTURAL EVOLATION YOGA COLOMBIA S.A.S.  
+3.  c-  Informar por cualquier medio, promociones y/o campañas comerciales. 
+4.  d-  Generar mecanismos de comunicación eficientes y mantener contacto permanente con el titular de los datos personales. 
+5.  e-  Realizar encuestas decaídas y/o satisfacción. 
+6.  f-  Ofrecer servicios complementarios, desarrollados en conjunto con aliados comerciales de CENTRO CULTURAL EVOLATION YOGA COLOMBIA S.A.S.. 
+7.  g-  Enviar correspondencia o cualquier tipo de información y/o comunicación impresa. 
+8.  h-  Establecer comunicación directa por diferentes medios(físico,impreso,telefónico,mensajesdetexto,correoselectrónicos, etc.) con fines comerciales asociados a ventas de productos y/o servicios. 
+9.  i-  Compartir datos con aliados comerciales (personas naturales o jurídicas nacionales o extranjeras) en el desarrollo de convenios, campañas y/o acuerdos de índole comercial. 
+4. SEGURIDAD DE LA INFORMACIÓN. CENTRO CULTURAL EVOLATION YOGA COLOMBIA S.A.S.. se compromete al cumplimiento de su obligación de secreto de los datos de carácter personal y su deber de guardarlos, y adoptará las medidas de índole técnica y organizativa necesarias que garanticen la seguridad de los datos de carácter personal y eviten su alteración, perdida, tratamiento o acceso no autorizado, habida cuenta del estado de la tecnología. 
+5. USO DE COOKIES. Las Web de CENTRO CULTURAL EVOLATION YOGA COLOMBIA S.A.S. S. utiliza cookies. La cookie es un pequeño archivo de texto que el servidor del sitio web ubica en el disco duro del equipo del cliente y/o titular para recoger datos estadísticos sobre su navegación en el site y permitir la visualización de contenidos publicitarios. No contienen datos personales. El cliente y/o titular puede configurar su navegador para aceptar o rechazar la instalación de cookies o suprimirlos una vez haya finalizado su navegación en el sitio Web. Sin embargo CENTRO CULTURAL EVOLATION YOGA COLOMBIA S.A.S. aconseja y agradece que se active la aceptación de cookies para poder obtener datos más precisos que permitan mejorar el contenido y adaptarlo a las preferencias del cliente y/o titular. CENTRO CULTURAL EVOLATION YOGA COLOMBIA S.A.S. no se responsabiliza de que la desactivación de las cookies pueda impedir el buen funcionamiento de las paginas Web. 
+6. SUSCRIPCIÓN Y REGISTRO. En caso de que usted decida suscribirse a alguno de los servicios ofrecidos por CENTRO CULTURAL EVOLATION YOGA COLOMBIA S.A.S.., se le solicitaran una serie de datos personales imprescindibles con la finalidad de gestionar los productos o servicios solicitados (nombre, apellidos, email, estado físico del cliente, finalidad de la contratación de nuestros servicios, etc.). Igualmente se le podrá́ requerir que aporte voluntariamente una serie de datos complementarios destinados a labores de información y comercialización de ofertas, servicios, o actividades relacionadas con los mismos y limitadas a las actividades y servicios de CENTRO CULTURAL EVOLATION YOGA COLOMBIA S.A.S.. 
+7. VERACIDAD DE LA INFORMACIÓN. Los clientes y/o titulares responderán, en cualquier caso, de la veracidad de los datos facilitados, siendo responsables de comunicar cualquier modificación en los mismos, y quedando CENTRO CULTURAL EVOLATION YOGA COLOMBIA S.A.S. exento de cualquier tipo de responsabilidad a este respecto. CENTRO CULTURAL EVOLATION YOGA COLOMBIA S.A.S.. se reserva el derecho a excluir de los servicios registrados a todo cliente y/o titular que haya facilitado datos falsos, sin perjuicio de las demás acciones que procedan en Derecho. 
+8. ACCESO A LOS DATOS. Ningún tercero ajeno a cada uno de los responsables anteriormente mencionados podrá́ acceder en ningún caso directamente a sus datos personales sin su consentimiento expreso para cada ocasión, salvo los considerados responsables del tratamiento, los cuales necesitan acceder para prestar el servicio de gestión o desarrollo de la actividad. 
+9. DERECHOS DE LOS CLIENTES Y/O TITULARES. Los clientes y/o titulares pueden conocer y acceder de manera gratuita a los datos personales que se encuentra bajo nuestro control y pueden ejercer los derechos que les asisten como titulares de los mismos de acuerdo con lo previsto en la Ley 1581 de 2012. 
+Podrán solicitar, de manera gratuita, entre otras cosas lo siguiente: 
+a- Información general en relación con los datos que reposan en las bases de datos. b- Rectificación y/o actualización de los datos.
+c- Cancelación total o parcial de los datos.
+d- Oposición al tratamiento de los datos. 
+Lo anterior se podrá́ hacer mediante escrito enviado al correo electrónico info@evolationyogacolombia.com. donde se debe indicar nombre, la petición puntual y la información de a donde desea se envié la respuesta. 
+10. COMUNICACIONES COMERCIALES. CENTRO CULTURAL EVOLATION YOGA COLOMBIA S.A.S. S., en virtud de la Ley 1581 de 2012 y el Decreto 1377 de 2013, en ningún caso remitirán publicidad y comunicaciones con fines de venta u otras de naturaleza comercial a los clientes y/o titulares sin que medie su previa solicitud o consentimiento. 
+11. BAJA DE COMUNICACIONES EN FORMATO ELECTRÓNICO. CENTRO CULTURAL EVOLATION YOGA COLOMBIA S.A.S.. informa a los clientes y/o titulares que, en caso de haber solicitado el envió de mensajes comerciales o alertas en formato electrónico, podrán darse de baja de este tipo de comunicaciones siguiendo las instrucciones indicadas en cada caso o comunicándolo al correo electrónico 
+1. LAS PARTES 
+CONTRATO PRESTACION DE SERVICIOS 
+(I) Por una parte CENTRO CULTURAL EVOLATION YOGA COLOMBIA S.A.S., sociedad legalmente constituida bajo las leyes colombianas, numero de identificación tributara 900.566.567-8 todo lo cual consta en el certificado de existencia y representación legal expedido por la Cámara de Comercio de Bogotá́ (en adelante “EYC”) representada en este acto por Catalina Caceres mayor de edad, vecino y residente de la ciudad de Bogotá́ e identificado con cedula de ciudadanía numero 52.868.067 y por otra 
+(II) el afiliado, identificado como aparece al pie de su firma, mayor de edad, vecino y residente de la ciudad de Bogotá́, (en adelante el “Afiliado”) 
+Las personas anteriormente identificadas se denominaran individualmente la Parte y conjuntamente las Partes.
+La Partes han acordado suscribir el presente contrato de prestación de servicios centro medico y yoga, (en adelante el “Contrato”) el cual se regirá́ por las siguientes clausulas: 
+
+
+
+2.CLAUSULAS
+
+PRIMERA. OBJETO: Por medio del presente Contrato EYC se obliga a suministrar al Afiliado los servicios centro medico y yoga, (denominados en su conjunto los “Servicios”) en los centros de EYC. Los Servicios se prestaran con sujeción a las obligaciones detalladas en el Anexo 4 denominado “Reglamento General de Servicios”
+
+SEGUNDA.DURACIÓN Y VIGENCIA DEL CONTRATO: El Contrato estará́ vigente desde la fecha de su firma por las Partes y su duración dependerá́ del Plan adquirido por el Afiliado. Parágrafo 1: En los planes DEBITO AUTOMATICO, EL AFILIADO únicamente podrá́ modificar al inicio de su afiliación hasta antes de la fecha de inicio del debito automático.
+
+TERCERA. VALOR: El valor del Contrato dependerá́ del Plan elegido por el Afiliado. El Afiliado pagará por una sola vez al momento de la firma del contrato y sin derecho a devolución, los derechos de acceso según el Plan escogido (en adelante el “Valor de la Afiliación”).El Valor de la Afiliación correspondiente al primer mes será́ pagado de forma anticipada.
+El Valor de la Afiliación incluye los impuestos aplicables teniendo en cuenta la naturaleza de los Servicios. En caso de que por ajustes en la normatividad vigente resultaran aplicables nuevos impuestos, tasas o contribuciones que hicieran excesivamente oneroso para EYC la prestación de los servicios en los términos establecidos en este Contrato EYC podrá́ realizar los ajustes correspondientes de forma unilateral.
+
+CUARTA. FORMA DE PAGO: La forma de pago dependerá́ del Plan elegido por el Afiliado. La forma de pago aplicable será́ una de las que se indican a continuación dependiendo del Plan elegido así́:
+4.1 Plan Debito Automático: el Valor de la Afiliación será́ pagado mensualmente de forma anticipada y se incrementará el primero (1) de febrero de cada año de acuerdo al índice de Precios al Consumidor (IPC) más dos (2) puntos porcentuales. El cobro se efectuará desde que el Afiliado expresamente indique y autorice mediante la suscripción del formato de autorización que hace parte de este Contrato. Se entenderá́ que el pago fue realizado en forma oportuna cuando este se efectúe dentro de los diez (10) primeros días calendario del mes en curso, igualmente se obliga a mantener fondos suficientes en la tarjeta de crédito indicada para cubrir las Cuotas Mensuales de Afiliación y a que el debito automático autorizado se lleve a cabo normalmente durante el tiempo y la oportunidad indicada en el presente Contrato. 
+Si en la oportunidad en que se realiza el cargo/debito a cargo del Afiliado no hay fondos disponibles en la tarjeta de crédito, EYC podrá́ realizar el debito nuevamente cuando existan fondos disponibles en ella. En todo caso, el monto a debitar/cargar de la tarjeta de crédito del Afiliado no podrá́ exceder en un mes el valor equivalente a tres (3) Cuotas mensuales de Valor de la Afiliación pactado en este Contrato. 
+El plazo mínimo de permanencia en el plan de débito automático será de dos (2) meses consecutivos. Una vez cumplido el plazo aplica las disposiciones relativas a retiros y congelación. Las renovaciones del débito automático será bimensual (un periodo de dos meses), si no hay previo aviso de cancelación o retiro, mencionado posteriormente en el numeral 10.5.
+4.2 Forma de pago plan PREPAGO. El AFILIADO podrá́ hacer el pago mediante tarjeta crédito.
+Parágrafo: EL Afiliado reconoce, acepta y se obliga a pagar a EYC, intereses de mora a la máxima tasa permitida por la Ley colombiana sobre el Valor de la Afiliación no pagado oportunamente
+
+QUINTA.MORA EN EL PAGO: En caso demora en el pago en el Valor de la Afiliación, los Servicios prestados por EYC serán suspendidos hasta tanto el Afiliado pague las cuotas en mora.
+
+SEXTA.OBLIGACIONES DEL AFILIADO: El Afiliado deberá́ cumplir en forma eficiente y oportuna las siguientes reglas: 
+6.1. Practicarse el examen medico y/o examen preventivo de aptitud física (evaluación medica y/o clínica), exigida para definir un programa medico deportivo adecuado.  El afiliado deberá coordinar con EYC la cita con uno de sus especialistas.
+6.2.  Pagar oportunamente el Valor de la Afiliación, conforme al Plan seleccionado. 
+6.3.  Mantenerse durante todo el tiempo de vigencia del Contrato afiliado a una EPS y tener al día los aportes al régimen de seguridad social en salud. Al inicio, y en cualquier momento durante la vigencia del Contrato, EYC podrá́ requerir los comprobantes que evidencien la afiliación del Afiliado al sistema de seguridad social en salud y que los pagos se encuentren al día. 
+6.4. Conocer las condiciones de los servicios que prestan terceros diferentes a EYC en sus instalaciones. El Afiliado podrá́ hacer uso de estos servicios ofrecidos por terceros aceptando las condiciones de prestación de tales servicios. Se entenderá́ que existe aceptación tácita de las citadas condiciones de servicio con el mero uso de los mismos por parte del Afiliado. 
+6.5. El Afiliado deberá́ presentar las Peticiones, Quejas y Reclamos según los parámetros establecidos en la ley y bajo el sistema establecido por EYC, cuya información se encuentra disponible en el documento anexo 4 a este contrato y que hace parte integrante del mismo, el cual el AFILIADO declara conocer y aceptar.
+
+
+
+SÉPTIMA. OBLIGACIONES Y DERECHOS DE EYC: 
+7.1. Prestar los Servicios al Afiliado. Teniendo en cuenta que se trata de servicios centro medico y yoga considerados servicios médicos preventivos y de recuperación de la salud humana, los Servicios deben prestarse en instalaciones adecuadas, que den cumplimiento a los requisitos aplicables para servicios de esta naturaleza. 
+7.2. Ampliar, reducir, remodelar o cerrar, temporal o definitivamente las sedes donde se prestan los Servicios cuando las condiciones del negocio así́ lo determinen. Cuando el cierre de la sede sea por un periodo superior a un (1) mes, el afiliado podrá́ optar entre continuar disfrutando los servicios contratados en otra sede de igual o inferior categoría a la señalada en el Anexo correspondiente, Si los servicios no se disfrutan en otro centro de EYC; el Afiliado podrá́ optar por extender el contrato por un número de meses igual de meses a los no disfrutados con motivo de la remodelación. En este caso el Valor de la Afiliación se seguirá́ pagando de la forma pactada y los meses de compensación de disfrutaran al finalizar el termino inicial del contrato. En caso de que las Partes estimen improcedentes las dos opciones anteriormente mencionadas podrán de mutuo acuerdo dar por terminado el Contrato. En el evento en el que las Partes decidan dar por terminado el Contrato, EYC reembolsará al Afiliado el valor correspondiente que hubiere pagado y no hubiere disfrutado y el valor de los costos no reembolsables desde el día en que el Afiliado presente la solicitud escrita de terminación en la respectiva sede de EYC. EYC realizará el reembolso por estos conceptos dentro de los treinta (30) días siguientes a la fecha en la que se acuerde la terminación del Contrato. 
+OCTAVA. DEVOLUCIONES: No hay lugar a devoluciones con excepción del caso contemplado en el numeral 7.2 de la clausula séptima de este contrato, caso en el cual se devolverá́ el dinero en proporción al tiempo pagado y que falte por ser utilizado en tal momento. 
+NOVENA.CAMBIO DE CATEGORÍA: el Afiliado podrá́ cambiar el Plan al que se encuentra afiliado pudiendo mejorar el Plan o asociarse bajo un Plan de menor categoría.  
+9.1. En caso que el Afiliado solicite un cambio de categoría y su factura no haya superado los treinta (30) días después de generada, se liquidará la diferencia con las tarifas existentes en el momento de solicitar el cambio.
+
+9.2. En caso que el Afiliado solicite un cambio de categoría y su factura haya sido generada con una anticipación superior a treinta (30), se liquidará la diferencia a pagar con la tarifa base de negociación. 
+Parágrafo 1: Para el plan Debito Automático el cambio de categoría se generará el primer día hábil del mes siguiente a la fecha de solicitud y se debe cancelar el valor diferencial entre El pago mensual de esta forma se actualizará a la nueva categoría solicitada. 
+
+
+DÉCIMA.TERMINACIÓN: El Contrato se dará́ por terminado de forma anticipada los siguientes casos.
+
+10.1. Por el incumplimiento del Afiliado de cualquiera de las obligaciones derivadas del presente Contrato. En este caso EYC podrá́ dar por terminado el Contrato en cualquier momento de forma unilateral. La terminación por la causal aquí́ establecida no generará indemnización alguna a favor del afiliado. 
+10.2. Por la mora en el pago del Valor de la Afiliación por tres (3) meses, consecutivos o no, durante un mismo periodo de doce (12) meses. En este caso el Afiliado será́ automáticamente desafiliado y perderá́ inmediatamente el valor pagado por la cuota de Inscripción en caso de que la misma se haya causado.
+
+10.3. Cuando el comportamiento del Afiliado en las instalaciones de EYC atente contra las buenas costumbres y/o sana convivencia o cuando se incumpla cualquiera de las normas de convivencia establecidas en el estudio. En este caso el Afiliado será́ automáticamente desafiliado y perderá́ inmediatamente el valor pagado por la cuota de Inscripción en caso de que la misma se haya causado. 
+10.4.  Por solicitud del Afiliado, siempre que este se encuentre al día y que la solicitud de terminación sea presentada por escrito. 
+10.5.  El Plan Debito Automático el Afiliado podrá́ terminar unilateralmente el Contrato sin previa notificación radicada por escrito al PRESTADOR con no menos de quince (15) días calendario de anticipación a la fecha de terminación efectiva. La comunicación podrá́ ser presentada a través del correo electrónico info@evolationyogacolombia.com. EYC actuará al Afiliado los quince (15) días durante los cuales se surte el tramite de cancelación de la afiliación; tiempo durante el cual el Afiliado podrá́ seguir disfrutando de los Servicios, de acuerdo a su Plan y categoría. 
+4.  Parágrafo 1. Sin perjuicio de la terminación del Contrato, EYC podrá́ cobrar los saldos adeudados por el Afiliado vía cobro jurídico y mediante el reporte a las centrales de riesgo. EYC podrá́ hacer efectivo el debito automático directamente y/o delegar y/o autorizar a la persona o entidad que considere pertinente e idónea para cumplir la función de recaudo de las sumas adeudadas por el Afiliado.
+DÉCIMA PRIMERA. CESIÓN DEL CONTRATO: El Afiliado podrá́ transferir las obligaciones y derechos que surgen del presente contrato y que el no haya utilizado, en los siguientes casos en el cual deberá pagar una multa establecida por EYC:
+
+11.1.  Por incapacidad medica del Afiliado conforme a las reglas descritas en la clausula decima tercera de este Contrato. 
+11.2.  Por solicitud escrita del Afiliado siempre y cuando se encuentre a paz y salvo en el cumplimiento de la totalidad de sus obligaciones y medie aceptación expresa por parte de EYC. Multa  La cesión deberá́ solicitarse por escrito mediante carta entregada en la ciudad donde se efectuó́ la afiliación y con una antelación mínima de ocho (8) días calendario a la fecha de la cesión efectiva. 
+DÉCIMA SEGUNDA. TRATAMIENTO DE DATOS PERSONALES: En consonancia con las disposiciones legales, EYC recolectará los datos personales del Afiliado en sus bases de datos para el cumplimiento de los fines empresariales de EYC, para realizar los pagos a los que haya lugar, para fines estadísticos y de ley, así́ como para el envió de noticias y anuncios a los que haya lugar en desarrollo del Contrato. Así́, con la firma de este Contrato, el Afiliado autoriza a EYC para que realice la recolección, almacenamiento, uso, circulación, supresión, transferencia y transmisión (el “Tratamiento”) de sus datos personales para los fines antes descritos. 
+El Afiliado autoriza igualmente a EYC para transferir y/o transmitir sus datos personales o permitir el acceso a estos a las empresas controlantes, controladas o afiliadas a EYC y a quien ella los transmita o transfiera, bien sea que estén ubicados en Colombia o en el exterior, para el cumplimiento de los mismos fines de EYC. Las políticas para el Tratamiento de los datos personales que recolecte EYC se encuentran incluidas en el manual de políticas de tratamiento de datos personales de EYC 
+Con la suscripción del presente Contrato el Afiliado autoriza a Escapara: 
+1.  a)  Enviar información sobre novedades, noticias y promociones propias y de terceros 
+2.  b)  Enviar información sobre programas propios y de terceros; 
+3.  c)  Precisar, analizar y optimizar los productos y servicios existentes y futuros, propios y de terceros 
+4.  d)  Reportar información sobre riesgos crediticios y el control y prevención del lavado de activos 
+5.  e)  Realizar actividades de archivo, actualización, almacenamiento y procesamiento de información, sea por sí mismo o a través de 
+6.  terceros con quienes se contrate a tal efecto.
+7.  Promocionar y mercadear productos y servicios nuevos y existentes, propios y de terceros. Para este efecto y, para dar cumplimiento a la Ley 1581 de 2012 y al Decreto 1377 de 2013, sobre Protección de Datos Personales, el Afiliado tendrá́ derecho en cualquier momento a acceder a sus datos personales, a que estos sean rectificados, modificados o a denegar su utilización, dirigiendo una comunicación escrita al correo electrónico info@evolationyogacolombia.com
+8.  La información personal de los afiliados a la que se refiere ésta clausula, permanecerá́ en las bases de datos de EYC hasta por un periodo de cinco años posteriores a la cancelación del servicio.
+DÉCIMA TERCERA.SUSPENSIÓN PROVISIONAL DE SERVICIOS POR CONGELACIÓN O INCAPACIDAD Y EXTENSIONES: El Afiliado podrá́ suspender por congelación o incapacidad el plazo de ejecución del presente Contrato por máximo 120 días calendario en plazos de 30 días (min 30 días). Se entiende por congelación la solicitud de suspensión del plazo de ejecución del contrato que hace el Afiliado por mera voluntad, la cual debe hacerse por escrito y en las instalaciones de cualquiera de las sedes de EYC. La incapacidad es la formula emitida por un medico con tarjeta profesional vigente, mediante la cual certifica que, debido al estado de salud del Afiliado, este no podrá́ realizar sus prácticas de ejercicio durante un determinado lapso. Afiliado podrá́ suspender la utilización de los servicios que le garantiza este Contrato, conforme las siguientes reglas:
+
+13.1. El Afiliado que adquiera un Plan diferente a débito automático , tendrá́ derecho a extender, sin costo alguno, el servicio una (1) vez durante la vigencia de su Plan. El termino de cada extensión, no podrá́ ser , superior a un (1) mes. En este caso el periodo pagado se aplicará como un saldo a favor futuro por el periodo establecido en la incapacidad.  Si el afiliado desea extender una segunda vez, puede pagar 55.ooo para realizar una segunda extensión por hasta 30 días máximo. Se debe cancelar con antelación en cualquiera de las sedes para activar la extensión.
+13.2.  El Afiliado del Plan Debito Automático o en semana de introducción, no podrá́ realizar extensiones ni congelaciones .
+13.3. Cuando la extensión se dé por incapacidad medica del Afiliado, no se generará cobro alguno, siempre y cuando la incapacidad sea certificada por el medico de la E.P.S. a la cual esté vinculado el Afiliado o cuando la incapacidad sea dada por uno de los médicos de EYC. La incapacidad medica deberá́ ser presentada dentro de los treinta (30) días siguientes al cumplimiento de la incapacidad. 
+Parágrafo 1: Las congelaciones no aplican de forma retroactiva.
+
+DÉCIMA CUARTA - DECLARACIONES DEL AFILIADO: Para efectos de celebrar el presente Contrato el Afiliado declara, manifiesta y acepta lo siguiente:
+
+14.1. Que una de las políticas EYC es el mejoramiento continuo a fin de prestar todos los días un mejor servicio a sus afiliados. Por esta razón el Afiliado entiende y acepta que pueden ocurrir incomodidades o limitaciones de algunos servicios contratados, con ocasión de obras de remodelación o refacción que EYC vaya a realizar en algunos de sus centros. Estas situaciones serán informadas a todos los afiliados con anterioridad. de forma directa en cada centro o a través la página web www.evolationyogacolombia.com.co
+
+14.2. Que conoce, entiende y acepta que los servicios ofrecidos y prestados por terceros independientes, autónomos y diferentes a EYC en sus instalaciones son ofrecidos y prestados de manera independiente por un tercero diferente a EYC. Por lo tanto, EYC no es responsable por cualquier daño o perjuicio que se derive o pueda derivarse de dichos ofrecimientos, venta de productos o prestación de servicios.
+
+14.3. Que conoce y acepta que EYC ha dispuesto casilleros o lockers como una mera facilidad para que los afiliados que deseen puedan guardar objetos en ellos. Que lo anterior no implica de ninguna manera que a EYC le asista ningún tipo de responsabilidad ni custodia sobre los bienes dejados en dichos casilleros o lockers y que la utilización de los mismos es responsabilidad exclusiva del afiliado quien será́ el único responsable por la custodia y cuidado de los objetos depositados en ellos.
+
+14.4. Que conoce y acepta que los casilleros o lockers están diseñados y dispuestos para que el usuario pueda depositar ropa y prendas de vestir y que no están diseñados para depositar o dejar objetos de valor tales como billeteras, joyas, relojes, dispositivos electrónicos, computadores portátiles, teléfonos celulares, dinero en efectivo, tarjetas de crédito, tarjetas debito u otros similares; y que por ende si los mismos se depositan en el, será́ bajo responsabilidad exclusiva del usuario sin que le asista a EYC ningún tipo de responsabilidad en el evento de presentarse perdida o robo de los mismos.
+
+DÉCIMA QUINTA.DOMICILIO CONTRACTUAL Y NOTIFICACIONES JUDICIALES: Para todos los efectos judiciales, se conviene como lugar de cumplimiento de las obligaciones derivadas del presente contrato la ciudad de Bogotá́ D.C. Las Partes acuerdan que las notificaciones judiciales que se les deba realizar, en razón de este Contrato, se remitirán únicamente por escrito a las siguientes direcciones:
+CENTRO CULTURAL EVOLATION YOGA COLOMBIA S.A.S.. Calle 80 no 8.-44, Bogotá́, D.C.
+
+AFILIADO __________________________________________
+
+DÉCIMA SEXTA.MODIFICACIONES. EYC podrá́ modificar de acuerdo a las necesidades del servicio el presente Contrato de prestación de servicios, así́ como el Reglamento General de Servicios. De realizarse alguna modificación, esta será́ informada de manera oportuna y por medios idóneos y eficaces al Afiliado.
+
+DÉCIMA SEPTIMA.SOLICITUDES, TRÁMITES Y NOVEDADES. Todas las solicitudes, tramites y/o novedades que el Afiliado tenga en cuanto a la prestación de los servicios aquí́ contratados serán atendidas por el PRESTADOR en cualquiera de sus sedes o en su línea de servicio al cliente: info@evolationyogacolombia.com Las solicitudes o requerimientos que realice el Afiliado por algún canal o medio distinto a los señalados en esta clausula no se entenderán efectuados a EYC.
+
+DECIMA OCTAVA – DOCUMENTOS DEL CONTRATO. Los documentos del Contrato que se relacionan a continuación constituyen el acuerdo único y total entre las Partes. Las obligaciones y responsabilidades de una parte en relación con la otra son las definidas explícitamente en los documentos del Contrato y en consecuencia, ninguna de las partes estará́ obligada a asumir ninguna obligación o responsabilidad implícita o tacita no prevista en tales documentos: - Contrato de Prestación de Servicios. – Reglamento general de servicios.
+En constancia de lo anterior, se suscribe el presente Contrato en dos (2) ejemplares del mismo tenor y valor legal, en la ciudad de Bogotá́ D.C
+[FIRMAS] 
+
+ANEXO 1 CONSENTIMIENTO INFORMADO 
+Yo__________________________________________ mayor de edad, identificado con cedula de ciudadanía/cedula de extranjería/pasaporte número __________________________ expedido en _____________________, certifico que: 
+1.  He sido cuestionado sobre mis antecedentes médicos, familiares y personales que pueden ocasionar riesgo para mi salud. 
+2.  Que toda la información que he suministrado ha sido veraz y no queda ninguna adicional por revelar, por lo cual me hago responsable por cualquier hecho que ocurra, en caso de no respetar las indicaciones dadas en el programa de entrenamiento formulado.
+3.   Que cualquier actuación realizada en exceso de mi programa de entrenamiento o por fuera del mismo es de mi entera responsabilidad, por lo que exonero a EYC de cualquier daño que pueda generarse por cualquier actuación realizada que no esté incluida en mi programa de entrenamiento o que se realice por fuera de las frecuencias e intensidades especificadas en el mismo. 
+4.  Que es mi responsabilidad realizar exámenes médicos de seguimiento, por lo que me comprometo a reportar a EYC, cualquier cambio en mi estado de salud que pueda influir en mi práctica de entrenamiento.
+5.  Que he leído y entiendo en su integridad el contrato, sus anexos y especialmente el presente documento de exoneración de responsabilidad y asunción expresa de riesgo, entendiendo a cabalidad sus efectos y alcance, entiendo que he renunciado a derechos legales al firmarlo y lo firmo de forma libre y voluntaria. 
+Para todos los efectos se firma en ______________ el ___(_) de __________ de dos mil (____) 20(_) 
+_______________________ Firma
+Identificación 
+
+
+ANEXO 4
+REGLAMENTO GENERAL DE SERVICIOS:
+NORMAS DE CONVIVENCIA, MANEJO ADECUADO DE LOS IMPLEMENTOS Y PROHIBICIONES 
+1.  Utilizar siempre ropa y calzado deportivo adecuado. 
+2.  Evitar el uso de anillos, pulseras o cualquier tipo de joyería, bisutería, accesorios como bolsos, celulares u otros objetos 
+personales, al momento de hacer uso de los implementos para realizar ejercicio. 
+3.  Atender las recomendaciones del personal autorizado. No utilizar los aparatos o implementos de entrenamiento si se encuentra 
+tomando un medicamento que cause mareo o somnolencia, o si sufre una condición medica que lo impida para uso. 
+4.  EYC en ningún momento autoriza a los entrenadores o colaboradores para la prescripción y recomendación de medicamentos, complementos o suplementos alimenticios, por tal razón es responsabilidad y recae sobre la esfera de su voluntad del usuario atender tales recomendaciones. 
+
+5.  Los usuarios De EYC conservaran mínimas condiciones de higiene, utilizando obligatoriamente la toalla para mantener los accesorios limpios de sudor.
+
+6.  Está prohibido fumar, ingerir bebidas alcohólicas, o consumir sustancias psicoactivas en las instalaciones, o ingresar bajo los efectos de bebidas alcohólicas sustancias psicoactivas. 
+
+7.  Está prohibido el ingreso de alimentos a las instalaciones de EYC, salvo los previamente autorizados. 
+
+8.  En beneficio de todos, se deberá́ colocar el material deportivo en su lugar correspondiente al terminar el entrenamiento. En este sentido, se solicita el máximo cuidado con el material a fin de evitar un deterioro prematuro. 
+
+9.  En caso de dudas, quejas o averías, solicitamos que lo comunique inmediatamente con el personal de la COMPAÑÍA. 
+
+10. Queda prohibido terminantemente el maltrato de cualquier equipo. EYC se reserva el derecho de desafiliar a cualquier usuario que contravenga esta recomendación, sin perjuicio del cobro respectivo. 
+
+11. Cuidar de los elementos que se almacenen en el locker asignado, por lo que se sugiere el uso de un candado para asegurarlos efectivamente. Lo anterior, solo durante el tiempo que el usuario haga uso de los servicios de EYC.
+
+12.  Se prohíbe el ingreso de mascotas, escoltas, niños menores de 7 años y acompañantes no afiliados. 
+SOBRE LAS INSTALACIONES 
+• –  Los implementos de ejercicios una vez usados deben ser colocados en sus respectivos sitios. 
+• –  Los Lockers no pertenecen de forma exclusiva a los usuarios, por tanto, su uso se restringe al tiempo destinado para su entrenamiento y el cuidado de su contenido debe hacerse de acuerdo con las indicaciones de esta “POLÍTICA DE USO DEL SERVICIO”. 
+• –  Los casilleros o lockers se han dispuesto como una mera facilidad para que los afiliados que deseen puedan guardar objetos en ellos. La utilización de los mismos no implica de ninguna manera que a EYC le asista ningún tipo de responsabilidad ni custodia sobre los bienes dejados en dichos casilleros o lockers y que su utilización es responsabilidad exclusiva del afiliado quien será́ el único responsable por la custodia y cuidado de los objetos depositados en ellos. 
+• –  Los casilleros o lockers están diseñados y dispuestos para que el usuario que así́ lo desee pueda depositar ropa o prendas de vestir y que no están diseñados para depositar o dejar objetos de valor tales como billeteras, joyas, relojes, dispositivos electrónicos, computadores portátiles, teléfonos celulares, dinero en efectivo, tarjetas de crédito, tarjetas debito u otros similares; y que por ende si los mismos se depositan en el, será́ bajo responsabilidad exclusiva del usuario sin que le asista a EYC ningún tipo de responsabilidad en el evento de presentarse perdida, daño o robo de los mismos. 
+• –  EYC no se hace responsable de la custodia de los bienes que no hacen parte integral del vehículo, como computadores, tabletas, celulares, billeteras y en general objetos de valor. 
+• –  La utilización de las instalaciones se permitirá́ solo a quienes se encuentren al día con el pago del servicio o plan contratado. 
+• –  El ingreso a las instalaciones no será́ permitido a: 
+– Quienes se encuentren desafiliados por conducta que genere daños en las instalaciones o los implementos – Quienes alteren la convivencia y armonía en el establecimiento
+– Quienes incumplan EL REGLAMENTO GENERAL DE SERVICIOS* 
+
+
+</textarea>
+            </div>
+
+            <div class="form-group col-xs-12">
+                <div class="checkbox">
+                    <label for="aceptacion">
+                        <input type="checkbox" id="aceptacion" ng-model="vm.aceptacion">Acepto la politica de privacidad y la proteccion de datos 
+                        <span>{{erroraceptacion}}</span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="col-xs-12 text-center" style="border-top: 1px rgba(0,0,0,0.15) solid; padding-top: 15px;">
+                <button type="button" class="btn btn-default">Cancelar y Volver</button>
+                <button type="submit" ng-click="registrarUsuarioPayu(vm,tdc)" class="btn btn-primary">Procesar Pago</button>
+            </div>
+
+        </form>
+    </div>
+</section>
+</main>
+
+<footer>
+    <h4>&copy; All Rights Reserved</h4>
+    <span>Powered by : <a href="" target="_blank">----</a></span>
+</footer>
+
+</body>
+</html>
