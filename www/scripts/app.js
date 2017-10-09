@@ -21,7 +21,7 @@ angular.module('main', [
 });
 'use strict';
 angular.module('main')
-.controller('HomeCtrl', function ($scope, $http, $location, $rootScope) {
+.controller('HomeCtrl', function ($scope, $http, $location, $rootScope,$window) {
 
   $scope.vm={
     aceptacion:false,
@@ -235,7 +235,8 @@ angular.module('main')
               }
             }).then(function mySuccess(responseSub) {
               console.log(responseSub)
-      
+              alert("estas subscrito al plan premium, te estamos redirigiendo a nuestra web principal")
+              $window.location.href = 'http://www.evolationyogacolombia.com/';
              }, function myError(response) {
               //$scope.myWelcome = response.statusText;
               console.log(response.data);
